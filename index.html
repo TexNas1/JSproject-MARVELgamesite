@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Project</title>
+    <link href="style.css" rel="stylesheet" />
+    <!--Work sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="grid-container">
+      <header class="header">
+        <img src="logo.svg" alt="Marvel" />
+        <h1 class="title">THE AVENGERS</h1>
+        <img src="logo.svg" alt="Marvel" />
+      </header>
+      <div class="menu">
+        <div class="navigation">
+          <button class="navigateBtn">NAVIGATION</button>
+          <ul class="nav display">
+            <li>
+              <a href="https://www.marvel.com/movies">Marvel.com Movies</a>
+            </li>
+            <li>
+              <a href="https://www.marvel.com/movies/avengers-endgame"
+                >Avengers Endgame</a
+              >
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/The_Avengers_(2012_film)"
+                >Wikipedia.org Avengers</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="rating">
+          <h3>Rate this webpage:</h3>
+          <input
+            type="range"
+            min="1"
+            max="10"
+            value="5"
+            class="slider"
+            id="myRange"
+          />
+          <span id="output"></span>
+          <div id="feedback">What do you think?</div>
+        </div>
+        <div class="figure">
+          <img
+            class="image-main"
+            src="images/Avengers-main.png"
+            alt="avenger"
+          />
+          <img
+            class="image-hover"
+            src="images/avengers-endgame-hover.png"
+            alt="avengers"
+          />
+        </div>
+      </div>
+      <main class="main">
+        <div class="user-input">
+          <h2>Who is your favourite member of The Avengers?</h2>
+          <label for="character">Enter your choice here:</label>
+          <input type="text" id="character" name="character" /><br /><br />
+          <button class="submitBtn">Submit Your Choice</button>
+          <div class="enteredChoice">
+            The Avenger you selected was:<span id="userInput"></span>
+          </div>
+        </div>
+        <div class="play-game">
+          <h2>Play the Game!</h2>
+          <p>
+            Press the button below to view the brief biography of a member of
+            the Avengers.
+          </p>
+          <div class="BtnContainer">
+            <button class="play"><span id="playbtn">Play Game</span></button>
+          </div>
+          <p>
+            Was your favourite character chosen?<span id="win-message"></span>
+          </p>
+        </div>
+        <div class="results">
+          <div class="biography">
+            <ul>
+              <li>Brief Biography</li>
+              <li>Avenger: <span id="avenger"></span></li>
+              <li>Name: <span id="name"></span></li>
+              <li>Actor: <span id="actor"></span></li>
+              <li><span id="bio"></span></li>
+            </ul>
+          </div>
+          <div class="character-image">
+            <img
+              id="characterImg"
+              src="images/AvengersAssemble.png"
+              alt="character"
+            />
+          </div>
+        </div>
+      </main>
+      <footer class="footer">&copy; Avengers Characters from marvel.com</footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
